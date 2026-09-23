@@ -1,0 +1,6 @@
+{
+  "name": "HELL ADMINISTRATION - 인간계 파견 허가서",
+  "description": "지옥에서 정식 서큐버스가 된 한서윤·한서아 자매의 인간계 파견허가서, 출입국 서류 및 생활수칙 공문서",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
