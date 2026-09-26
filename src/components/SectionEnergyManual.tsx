@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { ENERGY_STAGES, INTAKE_METHODS } from '../data/passportData';
-import SisterMemo from './SisterMemo';
 import { sound } from '../utils/audio';
 import AppleEmoji from './AppleEmoji';
 
@@ -198,38 +197,6 @@ export default function SectionEnergyManual({ showNotes }: SectionEnergyManualPr
             <p className="break-keep leading-relaxed">※ 과도한 흡수 주의 (인간 측의 급격한 쇠약 유발 시 규정 위반 처리)</p>
           </div>
         </div>
-
-        {/* 3. SISTER MEMOS */}
-        {showNotes && (
-          <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t-2 border-dashed border-pink-200 bg-rose-50/50 p-4 sm:p-5 rounded-2xl border border-rose-200">
-            <div className="flex items-center gap-2 mb-3">
-              <AppleEmoji char="💕" size={16} />
-              <h4 className="font-serif-kr font-bold text-stone-900 text-xs sm:text-sm break-keep">
-                섭취 매뉴얼 여백의 자매 필적 메모
-              </h4>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 items-start">
-              <div className="flex flex-col">
-                <SisterMemo
-                  author="서윤"
-                  text="“손만 잡아도 조금은 차는 거지...?”"
-                  rotation={-1}
-                  className="w-full"
-                />
-              </div>
-
-              <div className="flex flex-col">
-                <SisterMemo
-                  author="서아"
-                  text="“그걸로 언제 채워? 그냥 키스하면 빠르잖아 ♥”"
-                  rotation={1}
-                  className="w-full"
-                />
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );
