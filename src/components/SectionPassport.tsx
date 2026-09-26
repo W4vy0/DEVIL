@@ -2,6 +2,8 @@ import { SEOYUN_DATA, SEOA_DATA, SuccubusProfile } from '../data/passportData';
 import OfficialStamps from './OfficialStamps';
 import SisterMemo from './SisterMemo';
 import AppleEmoji from './AppleEmoji';
+import seoyunFallback from '../assets/images/seoyun_id_photo_1790171411846.jpg';
+import seoaFallback from '../assets/images/seoa_id_photo_1790171424086.jpg';
 
 interface SectionPassportProps {
   showNotes: boolean;
@@ -51,6 +53,13 @@ export default function SectionPassport({ showNotes }: SectionPassportProps) {
                   alt={`증명사진 - ${profile.nameKo}`}
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover rounded-xl aspect-square"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    const fallback = isLeft ? seoyunFallback : seoaFallback;
+                    if (target.src !== fallback) {
+                      target.src = fallback;
+                    }
+                  }}
                 />
               </div>
 
